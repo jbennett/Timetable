@@ -22,4 +22,18 @@ public class RealmActivityRepository: ActivityRepository {
     return activities.map { $0 }
   }
 
+  public func getActivities(predicate: NSPredicate?, sortBy: String?) -> [Activity] {
+    var activities = realm.objects(RealmActivity)
+
+    if let predicate = predicate {
+      activities = activities.filter(predicate)
+    }
+
+    if let sortBy = sortBy {
+      activities = activities.sorted(sortBy)
+    }
+
+    return activities.map { $0 }
+  }
+
 }

@@ -11,5 +11,6 @@ import Foundation
 public protocol ActivityRepository {
 
   func getAllActivities() -> [Activity]
+  func getActivities(predicate: NSPredicate?, sortBy: String?) -> [Activity]
 
 }

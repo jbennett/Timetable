@@ -10,4 +10,6 @@ import Foundation
 
 public protocol Activity {
 
+  var name: String { get }
+
 }
