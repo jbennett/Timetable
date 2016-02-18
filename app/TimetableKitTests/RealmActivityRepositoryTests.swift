@@ -19,8 +19,8 @@ class RealmActivityRepositoryTests: XCTestCase {
     super.setUp()
 
     // swiftlint:disable force_try
-    let random = rand()
-    realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TestRealm-\(random)"))
+    let random = rand() // make sure all in memory DBs are unique
+    realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "RealmActivityTest \(random)"))
     repository = RealmActivityRepository(realm: realm)
   }
 
@@ -30,7 +30,6 @@ class RealmActivityRepositoryTests: XCTestCase {
   }
 
   func testThatICanGetActivities() {
-    print("me too")
     let repository: ActivityRepository = self.repository
     let activities = repository.getAllActivities()
     XCTAssertNotNil(activities)
@@ -38,7 +37,6 @@ class RealmActivityRepositoryTests: XCTestCase {
   }
 
   func testCorrectActivitiesAreRetrieved() throws {
-    print("running")
     let repository: ActivityRepository = self.repository
     let activity1 = RealmActivity()
     let activity2 = RealmActivity()
