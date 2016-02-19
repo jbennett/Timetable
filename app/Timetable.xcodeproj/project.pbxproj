@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */; };
+		3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */; };
 		3B6733BB1C756C23003B5B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733BA1C756C23003B5B1D /* AppDelegate.swift */; };
 		3B6733BD1C756C23003B5B1D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733BC1C756C23003B5B1D /* FirstViewController.swift */; };
 		3B6733BF1C756C23003B5B1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733BE1C756C23003B5B1D /* SecondViewController.swift */; };
@@ -20,6 +22,9 @@
 		3B67340B1C75898D003B5B1D /* TimetableKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6733F51C75898D003B5B1D /* TimetableKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B6734181C758E95003B5B1D /* RealmActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6734171C758E95003B5B1D /* RealmActivityRepository.swift */; };
 		3B67341A1C758EED003B5B1D /* RealmActivityRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6734191C758EED003B5B1D /* RealmActivityRepositoryTests.swift */; };
+		3BB4AE091C77C27E00924FE8 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */; };
+		3BB4AE0C1C77C74500924FE8 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */; };
+		3BB4AE0E1C77C7A300924FE8 /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */; };
 		3BC0C5F61C7590D5003E919E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0C5F51C7590D5003E919E /* Activity.swift */; };
 		3BC0C5F81C75918D003E919E /* ActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0C5F71C75918D003E919E /* ActivityRepository.swift */; };
 		3BC0C5FC1C759850003E919E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC0C5FA1C759848003E919E /* Realm.framework */; };
@@ -81,6 +86,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
+		3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepositoryFactory.swift; sourceTree = "<group>"; };
 		3B6733B71C756C23003B5B1D /* Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6733BA1C756C23003B5B1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B6733BC1C756C23003B5B1D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +106,9 @@
 		3B6734071C75898D003B5B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B6734171C758E95003B5B1D /* RealmActivityRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActivityRepository.swift; sourceTree = "<group>"; };
 		3B6734191C758EED003B5B1D /* RealmActivityRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActivityRepositoryTests.swift; sourceTree = "<group>"; };
+		3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDataSource.swift; sourceTree = "<group>"; };
 		3BC0C5F51C7590D5003E919E /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		3BC0C5F71C75918D003E919E /* ActivityRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRepository.swift; sourceTree = "<group>"; };
 		3BC0C5FA1C759848003E919E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -146,6 +156,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5F6A051C7636FF00D98E34 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */,
+				3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		3B5F6A0A1C7638E400D98E34 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B6733BC1C756C23003B5B1D /* FirstViewController.swift */,
+				3B6733BE1C756C23003B5B1D /* SecondViewController.swift */,
+				3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3B5F6A0B1C7638EE00D98E34 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3B6733C01C756C23003B5B1D /* Main.storyboard */,
+				3B6733C31C756C23003B5B1D /* Assets.xcassets */,
+				3B6733C51C756C23003B5B1D /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3B5F6A0C1C7638FE00D98E34 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				3B6733BA1C756C23003B5B1D /* AppDelegate.swift */,
+				3B6733C81C756C23003B5B1D /* Info.plist */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		3B5F6A0E1C76392400D98E34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		3B6733AE1C756C23003B5B1D = {
 			isa = PBXGroup;
 			children = (
@@ -172,13 +227,11 @@
 		3B6733B91C756C23003B5B1D /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
-				3B6733BA1C756C23003B5B1D /* AppDelegate.swift */,
-				3B6733BC1C756C23003B5B1D /* FirstViewController.swift */,
-				3B6733BE1C756C23003B5B1D /* SecondViewController.swift */,
-				3B6733C01C756C23003B5B1D /* Main.storyboard */,
-				3B6733C31C756C23003B5B1D /* Assets.xcassets */,
-				3B6733C51C756C23003B5B1D /* LaunchScreen.storyboard */,
-				3B6733C81C756C23003B5B1D /* Info.plist */,
+				3B5F6A0B1C7638EE00D98E34 /* Assets */,
+				3BB4AE0A1C77C28100924FE8 /* Controllers */,
+				3B5F6A0E1C76392400D98E34 /* Models */,
+				3B5F6A0A1C7638E400D98E34 /* View Controllers */,
+				3B5F6A0C1C7638FE00D98E34 /* System */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
@@ -195,6 +248,8 @@
 		3B6733F61C75898D003B5B1D /* TimetableKit */ = {
 			isa = PBXGroup;
 			children = (
+				3BB4AE071C77C25C00924FE8 /* DataSources */,
+				3B5F6A051C7636FF00D98E34 /* Factories */,
 				3BC0C5F41C7590CB003E919E /* Models */,
 				3B6734161C758E7D003B5B1D /* Repositories */,
 				3B6733F71C75898D003B5B1D /* TimetableKit.h */,
@@ -219,6 +274,22 @@
 				3B6734171C758E95003B5B1D /* RealmActivityRepository.swift */,
 			);
 			name = Repositories;
+			sourceTree = "<group>";
+		};
+		3BB4AE071C77C25C00924FE8 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		3BB4AE0A1C77C28100924FE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		3BC0C5F41C7590CB003E919E /* Models */ = {
@@ -467,6 +538,8 @@
 			files = (
 				3B6733BF1C756C23003B5B1D /* SecondViewController.swift in Sources */,
 				3B6733BB1C756C23003B5B1D /* AppDelegate.swift in Sources */,
+				3BB4AE0C1C77C74500924FE8 /* ActivitiesViewController.swift in Sources */,
+				3BB4AE091C77C27E00924FE8 /* ApplicationController.swift in Sources */,
 				3B6733BD1C756C23003B5B1D /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +557,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BC0C6061C75A01E003E919E /* RealmActivity.swift in Sources */,
+				3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */,
+				3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */,
 				3BC0C5F81C75918D003E919E /* ActivityRepository.swift in Sources */,
+				3BB4AE0E1C77C7A300924FE8 /* SimpleDataSource.swift in Sources */,
 				3BC0C5F61C7590D5003E919E /* Activity.swift in Sources */,
 				3B6734181C758E95003B5B1D /* RealmActivityRepository.swift in Sources */,
 			);

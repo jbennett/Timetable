@@ -12,9 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  var applicationController: ApplicationController?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+    guard let tabController = window?.rootViewController as? UITabBarController else {
+      fatalError("UITabBarController not configured as root view controller")
+    }
+
+    applicationController = ApplicationController()
+    applicationController?.configureTabBarController(tabController)
+
     return true
   }
 
