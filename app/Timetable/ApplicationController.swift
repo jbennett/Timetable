@@ -34,7 +34,7 @@ class ApplicationController {
     for viewController in rootViewControllers {
       if let viewController = viewController as? ActivitiesViewController {
         let activityRepository = repositoryFactory.activityRepository
-        let dataSource = SimpleDataSource<Activity>(data: activityRepository.getAllActivities(), cellIdentifier: "Activity Cell")
+        let dataSource = SimpleDataSource<Activity>(data: activityRepository.getActivities(nil, sortBy: "name"), cellIdentifier: "Activity Cell")
         viewController.dataSource = dataSource
 
         activityController = ActivityController(activityRepository: activityRepository, activitiesViewController: viewController)

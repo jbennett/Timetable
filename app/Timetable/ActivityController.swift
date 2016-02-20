@@ -50,7 +50,7 @@ extension ActivityController: EditActivityViewControllerDelegate {
     activityRepository.saveActivity(activity)
     activitiesViewController.dismissViewControllerAnimated(true, completion: nil)
 
-    let dataSource = SimpleDataSource<Activity>(data: activityRepository.getAllActivities(), cellIdentifier: "Activity Cell")
+    let dataSource = SimpleDataSource<Activity>(data: activityRepository.getActivities(nil, sortBy: "name"), cellIdentifier: "Activity Cell")
     activitiesViewController.dataSource = dataSource
   }
 }
