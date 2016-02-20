@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       fatalError("UITabBarController not configured as root view controller")
     }
 
+    window?.tintColor = UIColor(red:0.1, green:0.16, blue:0.24, alpha:1)
+
     applicationController = ApplicationController()
     applicationController?.configureTabBarControllers(tabController)
 
