@@ -11,6 +11,16 @@ import TimetableKit
 
 class ActivitiesViewController: UITableViewController {
 
-  var dataSource: SimpleDataSource<Activity>?
+  var dataSource: SimpleDataSource<Activity>? {
+    didSet {
+      dataSource?.cellConfiguration = configureCell
+      tableView.dataSource = dataSource
+      tableView.reloadData()
+    }
+  }
+
+  func configureCell(cell: UITableViewCell, activity: Activity) {
+    cell.textLabel?.text = activity.name
+  }
 
 }

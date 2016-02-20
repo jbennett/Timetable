@@ -31,7 +31,9 @@ class ApplicationController {
 
     for viewController in rootViewControllers {
       if let viewController = viewController as? ActivitiesViewController {
-        viewController.title = "asdf"
+        let activityRepository = repositoryFactory.activityRepository
+        let dataSource = SimpleDataSource<Activity>(data: activityRepository.getAllActivities(), cellIdentifier: "Activity Cell")
+        viewController.dataSource = dataSource
       }
     }
   }
