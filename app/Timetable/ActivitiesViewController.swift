@@ -23,4 +23,16 @@ class ActivitiesViewController: UITableViewController {
     cell.textLabel?.text = activity.name
   }
 
+  @IBAction func didTapAddActivity() {
+    showEditViewForActivity(nil)
+  }
+
+  func showEditViewForActivity(activity: Activity?) {
+    let editViewController = EditActivityViewController.fromStoryboard()
+    editViewController.activity = activity
+    let navViewController = UINavigationController(rootViewController: editViewController)
+
+    presentViewController(navViewController, animated: true, completion: nil)
+  }
+
 }
