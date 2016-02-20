@@ -11,6 +11,6 @@ import RealmSwift
 
 public class RealmActivity: Object, Activity {
 
-  public var name: String = ""
+  public dynamic var name: String = ""
 
 }
