@@ -15,14 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var applicationController: ApplicationController?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    guard let tabController = window?.rootViewController as? UITabBarController else {
+
+    let window = UIWindow()
+    ThemeController().applyStyles(window)
+
+    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    guard let tabController = viewController as? UITabBarController else {
       fatalError("UITabBarController not configured as root view controller")
     }
 
-    window?.tintColor = UIColor(red:0.1, green:0.16, blue:0.24, alpha:1)
-
     applicationController = ApplicationController()
     applicationController?.configureTabBarControllers(tabController)
+
+    window.rootViewController = tabController
+    self.window = window
+    window.makeKeyAndVisible()
 
     return true
   }

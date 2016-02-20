@@ -26,6 +26,7 @@
 		3B95F6A51C789B2800C1BCA6 /* RealmDynamicQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6A41C789B2800C1BCA6 /* RealmDynamicQuery.swift */; };
 		3B95F6A71C78A07E00C1BCA6 /* EditActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6A61C78A07E00C1BCA6 /* EditActivityViewController.swift */; };
 		3B95F6A91C78A1B700C1BCA6 /* EditActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B95F6A81C78A1B700C1BCA6 /* EditActivityViewController.storyboard */; };
+		3B95F6AB1C78EAC700C1BCA6 /* ThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6AA1C78EAC700C1BCA6 /* ThemeController.swift */; };
 		3BB4AE091C77C27E00924FE8 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */; };
 		3BB4AE0C1C77C74500924FE8 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */; };
 		3BB4AE0E1C77C7A300924FE8 /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */; };
@@ -114,6 +115,7 @@
 		3B95F6A41C789B2800C1BCA6 /* RealmDynamicQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDynamicQuery.swift; sourceTree = "<group>"; };
 		3B95F6A61C78A07E00C1BCA6 /* EditActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActivityViewController.swift; sourceTree = "<group>"; };
 		3B95F6A81C78A1B700C1BCA6 /* EditActivityViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditActivityViewController.storyboard; sourceTree = "<group>"; };
+		3B95F6AA1C78EAC700C1BCA6 /* ThemeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeController.swift; sourceTree = "<group>"; };
 		3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDataSource.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */,
+				3B95F6AA1C78EAC700C1BCA6 /* ThemeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				3B6733BB1C756C23003B5B1D /* AppDelegate.swift in Sources */,
 				3B95F6A71C78A07E00C1BCA6 /* EditActivityViewController.swift in Sources */,
 				3BB4AE0C1C77C74500924FE8 /* ActivitiesViewController.swift in Sources */,
+				3B95F6AB1C78EAC700C1BCA6 /* ThemeController.swift in Sources */,
 				3BB4AE091C77C27E00924FE8 /* ApplicationController.swift in Sources */,
 				3B6733BD1C756C23003B5B1D /* FirstViewController.swift in Sources */,
 			);
