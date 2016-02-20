@@ -24,7 +24,7 @@ class ApplicationController {
     }
   }
 
-  func configureTabBarController(tabController: UITabBarController) {
+  func configureTabBarControllers(tabController: UITabBarController) {
     let rootViewControllers = tabController.viewControllers?
       .map { $0 as? UINavigationController }
       .flatMap { $0?.topViewController } ?? []

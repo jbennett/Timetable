@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     applicationController = ApplicationController()
-    applicationController?.configureTabBarController(tabController)
+    applicationController?.configureTabBarControllers(tabController)
 
     return true
   }
