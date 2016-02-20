@@ -17,6 +17,24 @@ public class RealmActivityRepository: ActivityRepository {
     self.realm = realm
   }
 
+  public func createActivity() -> Activity {
+    return RealmActivity()
+  }
+
+  public func saveActivity(activity: Activity) {
+    guard let activity = activity as? RealmActivity else {
+      fatalError("Trying to save non-realm data into realm")
+    }
+
+    do {
+      try realm.write {
+        realm.add(activity)
+      }
+    } catch {
+      fatalError("could not save data into realm")
+    }
+  }
+
   public func getAllActivities() -> [Activity] {
     let activities = realm.objects(RealmActivity)
     return activities.map { $0 }

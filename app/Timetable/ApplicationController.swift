@@ -15,6 +15,8 @@ class ApplicationController {
   let realm: Realm
   let repositoryFactory: RepositoryFactory
 
+  var activityController: ActivityController?
+
   init() {
     do {
       self.realm = try Realm()
@@ -34,6 +36,8 @@ class ApplicationController {
         let activityRepository = repositoryFactory.activityRepository
         let dataSource = SimpleDataSource<Activity>(data: activityRepository.getAllActivities(), cellIdentifier: "Activity Cell")
         viewController.dataSource = dataSource
+
+        activityController = ActivityController(activityRepository: activityRepository, activitiesViewController: viewController)
       }
     }
   }

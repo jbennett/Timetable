@@ -13,4 +13,8 @@ public class RealmActivity: Object, Activity {
 
   public dynamic var name: String = ""
 
+  public func isValid() -> Bool {
+    return name != ""
+  }
+
 }

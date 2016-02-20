@@ -10,7 +10,8 @@ import Foundation
 
 public protocol ActivityRepository {
 
+  func createActivity() -> Activity
   func getAllActivities() -> [Activity]
   func getActivities(predicate: NSPredicate?, sortBy: String?) -> [Activity]
-
+  func saveActivity(activity: Activity)
 }

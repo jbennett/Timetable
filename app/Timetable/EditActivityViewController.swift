@@ -11,9 +11,18 @@ import TimetableKit
 
 class EditActivityViewController: UITableViewController {
 
-  var activity: Activity?
+  weak var delegate: EditActivityViewControllerDelegate?
+  @IBOutlet var nameField: UITextField!
+
+  var activity: Activity! {
+    didSet { self.updateForm() }
+  }
 
   override func viewDidLoad() {
+    guard activity != nil else {
+      fatalError("trying to edit activity that doesn't exist")
+    }
+
     super.viewDidLoad()
     title = titleString()
   }
@@ -26,13 +35,24 @@ class EditActivityViewController: UITableViewController {
     }
   }
 
+  func updateForm() {
+    guard isViewLoaded() else { return }
+
+    nameField.text = activity?.name
+  }
+
   @IBAction func didTapCancel() {
-    dismissViewControllerAnimated(true, completion: nil)
+    delegate?.editActivityViewController(self, didCancelEditingActivity: activity)
   }
 
   @IBAction func didTapSave() {
-    // TODO: save/create activity
-    dismissViewControllerAnimated(true, completion: nil)
+    activity.name = nameField.text ?? ""
+
+    if activity.isValid() {
+      delegate?.editActivityViewController(self, didSaveActivity: activity)
+    } else {
+      // TODO: notify user of error
+    }
   }
 
   class func fromStoryboard() -> EditActivityViewController {
@@ -43,4 +63,11 @@ class EditActivityViewController: UITableViewController {
 
     return viewController
   }
+}
+
+protocol EditActivityViewControllerDelegate: class {
+
+  func editActivityViewController(viewController: EditActivityViewController, didCancelEditingActivity activity: Activity)
+  func editActivityViewController(viewController: EditActivityViewController, didSaveActivity activity: Activity)
+
 }

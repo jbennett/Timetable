@@ -11,6 +11,7 @@ import TimetableKit
 
 class ActivitiesViewController: UITableViewController {
 
+  weak var delegate: ActivitiesViewControllerDelegate?
   var dataSource: SimpleDataSource<Activity>? {
     didSet {
       dataSource?.cellConfiguration = configureCell
@@ -24,15 +25,13 @@ class ActivitiesViewController: UITableViewController {
   }
 
   @IBAction func didTapAddActivity() {
-    showEditViewForActivity(nil)
+    delegate?.addActivityForActivitiesViewController(self)
   }
 
-  func showEditViewForActivity(activity: Activity?) {
-    let editViewController = EditActivityViewController.fromStoryboard()
-    editViewController.activity = activity
-    let navViewController = UINavigationController(rootViewController: editViewController)
+}
 
-    presentViewController(navViewController, animated: true, completion: nil)
-  }
+protocol ActivitiesViewControllerDelegate: class {
+
+  func addActivityForActivitiesViewController(activitiesViewController: ActivitiesViewController)
 
 }

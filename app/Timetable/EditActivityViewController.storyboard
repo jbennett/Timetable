@@ -16,7 +16,7 @@
                         <sections>
                             <tableViewSection id="vhD-1C-b0V">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yre-HA-Man">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="yre-HA-Man">
                                         <rect key="frame" x="0.0" y="99" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yre-HA-Man" id="e7P-hs-cyR">
@@ -32,10 +32,10 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVr-KC-jBN">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVr-KC-jBN">
                                                     <rect key="frame" x="141" y="8" width="451" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -57,11 +57,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="ipE-AS-b8m">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YOw-FQ-3mX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0aH-Kd-XZk"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YOw-FQ-3mX">
+                            <connections>
+                                <action selector="didTapCancel" destination="k9L-7t-qeE" id="typ-hw-0We"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0aH-Kd-XZk">
+                            <connections>
+                                <action selector="didTapSave" destination="k9L-7t-qeE" id="Kc7-OG-6yy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="nameField" destination="qVr-KC-jBN" id="rWS-Vr-J4x"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwd-a0-54t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
