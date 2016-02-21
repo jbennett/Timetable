@@ -11,10 +11,15 @@ import RealmSwift
 
 public class RealmActivity: Object, Activity {
 
+  public dynamic var identifier = NSUUID().UUIDString
   public dynamic var name: String = ""
 
   public func isValid() -> Bool {
     return name != ""
+  }
+
+  override public static func primaryKey() -> String? {
+    return "identifier"
   }
 
 }
