@@ -20,6 +20,10 @@ public class SimpleDataSource<T>: NSObject, UITableViewDataSource {
     self.cellIdentifier = cellIdentifier
   }
 
+  public func objectAtIndexPath(indexPath: NSIndexPath) -> T {
+    return data[indexPath.row]
+  }
+
   public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }

@@ -25,6 +25,7 @@ class EditActivityViewController: UITableViewController {
 
     super.viewDidLoad()
     title = titleString()
+    updateForm()
   }
 
   func titleString() -> String {
@@ -38,7 +39,7 @@ class EditActivityViewController: UITableViewController {
   func updateForm() {
     guard isViewLoaded() else { return }
 
-    nameField.text = activity?.name
+    nameField.text = activity.name
   }
 
   @IBAction func didTapCancel() {

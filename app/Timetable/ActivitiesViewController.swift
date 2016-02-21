@@ -28,10 +28,17 @@ class ActivitiesViewController: UITableViewController {
     delegate?.addActivityForActivitiesViewController(self)
   }
 
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    guard let activity = dataSource?.objectAtIndexPath(indexPath) else { return }
+
+    delegate?.editActivity(activity, forViewController: self)
+  }
+
 }
 
 protocol ActivitiesViewControllerDelegate: class {
 
   func addActivityForActivitiesViewController(activitiesViewController: ActivitiesViewController)
+  func editActivity(activity: Activity, forViewController viewController: ActivitiesViewController)
 
 }

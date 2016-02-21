@@ -38,6 +38,10 @@ extension ActivityController: ActivitiesViewControllerDelegate {
     editActivity(nil)
   }
 
+  func editActivity(activity: Activity, forViewController viewController: ActivitiesViewController) {
+    editActivity(activity)
+  }
+
 }
 
 extension ActivityController: EditActivityViewControllerDelegate {
