@@ -43,6 +43,7 @@ class EditActivityViewController: UITableViewController {
   }
 
   @IBAction func didTapCancel() {
+    closeKeyboard()
     delegate?.editActivityViewController(self, didCancelEditingActivity: activity)
   }
 
@@ -50,10 +51,15 @@ class EditActivityViewController: UITableViewController {
     activity.name = nameField.text ?? ""
 
     if activity.isValid() {
+      closeKeyboard()
       delegate?.editActivityViewController(self, didSaveActivity: activity)
     } else {
       // TODO: notify user of error
     }
+  }
+
+  func closeKeyboard() {
+    self.view.endEditing(true)
   }
 
   class func fromStoryboard() -> EditActivityViewController {
