@@ -48,7 +48,9 @@ class EditActivityViewController: UITableViewController {
   }
 
   @IBAction func didTapSave() {
-    activity.name = nameField.text ?? ""
+    let name = nameField.text ?? ""
+    let identifier = self.activity.identifier
+    let activity = Activity(name: name, identifier: identifier)
 
     if activity.isValid() {
       closeKeyboard()

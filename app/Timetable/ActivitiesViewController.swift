@@ -22,6 +22,7 @@ class ActivitiesViewController: UITableViewController {
 
   func configureCell(cell: UITableViewCell, activity: Activity) {
     cell.textLabel?.text = activity.name
+    cell.detailTextLabel?.text = "\(activity.identifier)"
   }
 
   @IBAction func didTapAddActivity() {

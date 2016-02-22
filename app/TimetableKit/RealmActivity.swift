@@ -9,10 +9,18 @@
 import Foundation
 import RealmSwift
 
-public class RealmActivity: Object, Activity {
+public class RealmActivity: Object {
 
   public dynamic var identifier = NSUUID().UUIDString
   public dynamic var name: String = ""
+
+  public func updateFromActivity(activity: Activity) {
+    name = activity.name
+  }
+
+  public func toActivity() -> Activity {
+    return Activity(name: name, identifier: identifier)
+  }
 
   public func isValid() -> Bool {
     return name != ""

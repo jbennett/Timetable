@@ -8,10 +8,18 @@
 
 import Foundation
 
-public protocol Activity {
+public struct Activity {
 
-  var name: String { get set }
+  public let identifier: Any?
+  public let name: String
 
-  func isValid() -> Bool
+  public init(name: String = "", identifier: Any? = nil) {
+    self.name = name
+    self.identifier = identifier
+  }
+
+  public func isValid() -> Bool {
+    return name != ""
+  }
 
 }

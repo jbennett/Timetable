@@ -17,27 +17,55 @@ public class RealmActivityRepository: ActivityRepository {
     self.realm = realm
   }
 
-  public func createActivity() -> Activity {
-    return RealmActivity()
+  public func saveActivity(activity: Activity) -> Activity {
+    if activity.identifier == nil {
+      return createActivity(activity)
+    } else {
+      return updateActivity(activity)
+    }
   }
 
-  public func saveActivity(activity: Activity) {
-    guard let activity = activity as? RealmActivity else {
-      fatalError("Trying to save non-realm data into realm")
+  private func createActivity(activity: Activity) -> Activity {
+    guard activity.identifier == nil else {
+      fatalError("cannot create an activity that exists")
     }
 
     do {
-      try realm.write {
-        realm.add(activity)
-      }
+      let realmActivity = RealmActivity()
+      realmActivity.updateFromActivity(activity)
+      try realm.write { realm.add(realmActivity) }
+      return realmActivity.toActivity()
     } catch {
-      fatalError("could not save data into realm")
+      // TODO: handle error
+      fatalError("could not create activity")
+    }
+  }
+
+  private func updateActivity(activity: Activity) -> Activity {
+    guard let identifier = activity.identifier as? String else {
+      fatalError("cannot update object with missing id")
+    }
+
+    let predicate = NSPredicate(format: "identifier = %@", identifier)
+    if let realmActivity = realm.objects(RealmActivity).filter(predicate).first {
+      do {
+        try realm.write {
+          realmActivity.updateFromActivity(activity)
+        }
+
+        return realmActivity.toActivity()
+      } catch {
+        // TODO: handle error
+        fatalError("could not update activity")
+      }
+    } else {
+      fatalError("tried to save activity with invalid identifier")
     }
   }
 
   public func getAllActivities() -> [Activity] {
     let activities = realm.objects(RealmActivity)
-    return activities.map { $0 }
+    return activities.map { $0.toActivity() }
   }
 
   public func getActivities(predicate: NSPredicate?, sortBy: String?) -> [Activity] {
@@ -51,7 +79,7 @@ public class RealmActivityRepository: ActivityRepository {
       activities = activities.sorted(sortBy)
     }
 
-    return activities.map { $0 }
+    return activities.map { $0.toActivity() }
   }
 
 }

@@ -21,7 +21,7 @@ class ActivityController {
   }
 
   func editActivity(activity: Activity?) {
-    let activity = activity ?? activityRepository.createActivity()
+    let activity = activity ?? Activity()
     let editViewController = EditActivityViewController.fromStoryboard()
     editViewController.activity = activity
     editViewController.delegate = self
