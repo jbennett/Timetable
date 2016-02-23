@@ -13,4 +13,5 @@ public protocol ActivityRepository {
   func getAllActivities() -> [Activity]
   func getActivities(predicate: NSPredicate?, sortBy: String?) -> [Activity]
   func saveActivity(activity: Activity) -> Activity
+  func deleteActivity(activity: Activity) -> Bool
 }

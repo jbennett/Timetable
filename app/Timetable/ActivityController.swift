@@ -41,6 +41,10 @@ extension ActivityController: ActivitiesViewControllerDelegate {
   func editActivity(activity: Activity, forViewController viewController: ActivitiesViewController) {
     editActivity(activity)
   }
+  
+  func deleteActivity(activity: Activity, forViewController viewController: ActivitiesViewController) {
+    activityRepository.deleteActivity(activity)
+  }
 
 }
 

@@ -10,10 +10,10 @@ import Foundation
 
 public struct Activity {
 
-  public let identifier: Any?
+  public let identifier: AnyObject?
   public let name: String
 
-  public init(name: String = "", identifier: Any? = nil) {
+  public init(name: String = "", identifier: AnyObject? = nil) {
     self.name = name
     self.identifier = identifier
   }

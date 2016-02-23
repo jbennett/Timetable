@@ -25,6 +25,23 @@ public class RealmActivityRepository: ActivityRepository {
     }
   }
 
+  public func deleteActivity(activity: Activity) -> Bool {
+    guard let identifier = activity.identifier,
+      let realmActivity = realm.objectForPrimaryKey(RealmActivity.self, key: identifier) else {
+      return false // todo: is this the best choice?
+    }
+
+    do {
+      try realm.write {
+        realm.delete(realmActivity)
+      }
+      return true
+    } catch {
+      fatalError("couldnt save")
+      return false
+    }
+  }
+
   private func createActivity(activity: Activity) -> Activity {
     guard activity.identifier == nil else {
       fatalError("cannot create an activity that exists")

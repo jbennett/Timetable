@@ -10,7 +10,7 @@ import UIKit
 
 public class SimpleDataSource<T>: NSObject, UITableViewDataSource {
 
-  let data: [T]
+  var data: [T]
   let cellIdentifier: String
 
   public var cellConfiguration: ((cell: UITableViewCell, object: T) -> Void)?
@@ -22,6 +22,10 @@ public class SimpleDataSource<T>: NSObject, UITableViewDataSource {
 
   public func objectAtIndexPath(indexPath: NSIndexPath) -> T {
     return data[indexPath.row]
+  }
+
+  public func removeObjectAtIndexPath(indexPath: NSIndexPath) {
+    data.removeAtIndex(indexPath.row)
   }
 
   public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
