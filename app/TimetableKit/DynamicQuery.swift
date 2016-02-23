@@ -8,13 +8,24 @@
 
 import Foundation
 
-public protocol DynamicQuery {
-  typealias Element
+// TODO: This should be changed to a protocol once swift 3.0 allows
+// full generics
+public class DynamicQuery<T> {
 
-  var sortKey: String? { get set }
-  var filterPredicate: NSPredicate? { get set }
-  var itemsUpdateCallback: ([Element] -> Void)? { get set }
+  public var sortKey: String? {
+    didSet { updateQuery() }
+  }
 
-  func getItems() -> [Element]
+  public var filterPredicate: NSPredicate? {
+    didSet { updateQuery() }
+  }
+
+  public var itemsUpdateCallback: ([T] -> Void)?
+
+  public func getItems() -> [T] {
+    fatalError("getItems() not implemented in subclass")
+  }
+
+  internal func updateQuery() {}
 
 }

@@ -41,7 +41,7 @@ extension ActivityController: ActivitiesViewControllerDelegate {
   func editActivity(activity: Activity, forViewController viewController: ActivitiesViewController) {
     editActivity(activity)
   }
-  
+
   func deleteActivity(activity: Activity, forViewController viewController: ActivitiesViewController) {
     activityRepository.deleteActivity(activity)
   }
@@ -57,8 +57,5 @@ extension ActivityController: EditActivityViewControllerDelegate {
   func editActivityViewController(viewController: EditActivityViewController, didSaveActivity activity: Activity) {
     activityRepository.saveActivity(activity)
     activitiesViewController.dismissViewControllerAnimated(true, completion: nil)
-
-    let dataSource = SimpleDataSource<Activity>(data: activityRepository.getActivities(nil, sortBy: "name"), cellIdentifier: "Activity Cell")
-    activitiesViewController.dataSource = dataSource
   }
 }

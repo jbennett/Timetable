@@ -16,6 +16,7 @@ class ApplicationController {
   let repositoryFactory: RepositoryFactory
 
   var activityController: ActivityController?
+  var activityQueryAdaptor: QueryDataSourceAdaptor<RealmActivity, Activity>?
 
   init() {
     do {
@@ -34,9 +35,15 @@ class ApplicationController {
     for viewController in rootViewControllers {
       if let viewController = viewController as? ActivitiesViewController {
         let activityRepository = repositoryFactory.activityRepository
-        let dataSource = SimpleDataSource<Activity>(data: activityRepository.getActivities(nil, sortBy: "name"), cellIdentifier: "Activity Cell")
+        let activites = activityRepository.getAllActivities()
+        let query = RealmDynamicQuery<RealmActivity>(realm: realm)
+        query.sortKey = "name"
+        let dataSource = SimpleDataSource<Activity>(data: activites, cellIdentifier: "Activity Cell")
+        let adaptor = QueryDataSourceAdaptor<RealmActivity, Activity>(query: query, dataSource: dataSource)
+        adaptor.conversionFunction = { return $0.toActivity() }
         viewController.dataSource = dataSource
 
+        activityQueryAdaptor = adaptor
         activityController = ActivityController(activityRepository: activityRepository, activitiesViewController: viewController)
       }
     }

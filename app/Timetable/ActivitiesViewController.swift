@@ -15,8 +15,7 @@ class ActivitiesViewController: UITableViewController {
   var dataSource: SimpleDataSource<Activity>? {
     didSet {
       dataSource?.cellConfiguration = configureCell
-      tableView.dataSource = dataSource
-      tableView.reloadData()
+      dataSource?.bindToTableView(self.tableView)
     }
   }
 

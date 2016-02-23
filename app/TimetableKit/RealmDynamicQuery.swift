@@ -9,35 +9,33 @@
 import Foundation
 import RealmSwift
 
-public class RealmDynamicQuery<T: RealmSwift.Object>: DynamicQuery {
-  public typealias Element = T
-
-  public var sortKey: String? {
-    didSet { self.updateQuery() }
-  }
-  public var filterPredicate: NSPredicate? {
-    didSet { self.updateQuery() }
-  }
-  public var itemsUpdateCallback: ([T] -> Void)?
+public class RealmDynamicQuery<T: Object>: DynamicQuery<T> {
 
   let realm: Realm
   let rootResult: Results<T>
   var managedResult: Results<T>
+  var notificationToken: NotificationToken?
 
   public init(realm: Realm) {
     self.realm = realm
-
     rootResult = realm.objects(T.self)
     managedResult = rootResult
+    super.init()
 
-    NSNotificationCenter.defaultCenter().addObserverForName(RealmSwift.Notification.DidChange.rawValue, object: nil, queue: nil) {
-      print("realm updated")
-      print($0)
-      self.itemsUpdateCallback?(self.getItems())
+    registerForNotifications()
+  }
+
+  func registerForNotifications() {
+    notificationToken = realm.addNotificationBlock { [weak self] _, _ in
+      self?.pushQueryResults()
     }
   }
 
-  func updateQuery() {
+  func pushQueryResults() {
+    self.itemsUpdateCallback?(self.getItems())
+  }
+
+  override func updateQuery() {
     managedResult = rootResult
 
     if let filterPredicate = filterPredicate {
@@ -47,9 +45,11 @@ public class RealmDynamicQuery<T: RealmSwift.Object>: DynamicQuery {
     if let sortKey = sortKey {
       managedResult = managedResult.sorted(sortKey)
     }
+
+    pushQueryResults()
   }
 
-  public func getItems() -> [T] {
+  public override func getItems() -> [T] {
     return managedResult.map { $0 }
   }
 

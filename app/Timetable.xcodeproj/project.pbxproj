@@ -42,6 +42,7 @@
 		3BC0C6021C759863003E919E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC0C5FA1C759848003E919E /* Realm.framework */; };
 		3BC0C6031C759863003E919E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC0C5FB1C759848003E919E /* RealmSwift.framework */; };
 		3BC0C6061C75A01E003E919E /* RealmActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0C6051C75A01E003E919E /* RealmActivity.swift */; };
+		3BD5CD4B1C7E68B300729691 /* QueryDataSourceAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5CD4A1C7E68B300729691 /* QueryDataSourceAdaptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		3BC0C5FA1C759848003E919E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3BC0C5FB1C759848003E919E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3BC0C6051C75A01E003E919E /* RealmActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActivity.swift; sourceTree = "<group>"; };
+		3BD5CD4A1C7E68B300729691 /* QueryDataSourceAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDataSourceAdaptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 				3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */,
 				3B95F6A21C7899EA00C1BCA6 /* DynamicQuery.swift */,
 				3B95F6A41C789B2800C1BCA6 /* RealmDynamicQuery.swift */,
+				3BD5CD4A1C7E68B300729691 /* QueryDataSourceAdaptor.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				3B95F6A31C7899EA00C1BCA6 /* DynamicQuery.swift in Sources */,
 				3BC0C6061C75A01E003E919E /* RealmActivity.swift in Sources */,
 				3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */,
+				3BD5CD4B1C7E68B300729691 /* QueryDataSourceAdaptor.swift in Sources */,
 				3B95F6A51C789B2800C1BCA6 /* RealmDynamicQuery.swift in Sources */,
 				3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */,
 				3BC0C5F81C75918D003E919E /* ActivityRepository.swift in Sources */,

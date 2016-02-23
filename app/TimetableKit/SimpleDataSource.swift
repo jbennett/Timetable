@@ -10,14 +10,24 @@ import UIKit
 
 public class SimpleDataSource<T>: NSObject, UITableViewDataSource {
 
-  var data: [T]
+  var tableView: UITableView?
   let cellIdentifier: String
 
+  public var data: [T] {
+    didSet {
+      self.tableView?.reloadData()
+    }
+  }
   public var cellConfiguration: ((cell: UITableViewCell, object: T) -> Void)?
 
   public init(data: [T], cellIdentifier: String) {
     self.data = data
     self.cellIdentifier = cellIdentifier
+  }
+  
+  public func bindToTableView(tableView: UITableView) {
+    self.tableView = tableView
+    tableView.dataSource = self
   }
 
   public func objectAtIndexPath(indexPath: NSIndexPath) -> T {
