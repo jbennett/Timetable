@@ -25,6 +25,10 @@ public class DynamicQuery<T> {
   public func getItems() -> [T] {
     fatalError("getItems() not implemented in subclass")
   }
+  
+  public func pushQueryResults() {
+    self.itemsUpdateCallback?(self.getItems())
+  }
 
   internal func updateQuery() {}
 

@@ -35,13 +35,13 @@ class ApplicationController {
     for viewController in rootViewControllers {
       if let viewController = viewController as? ActivitiesViewController {
         let activityRepository = repositoryFactory.activityRepository
-        let activites = activityRepository.getAllActivities()
         let query = RealmDynamicQuery<RealmActivity>(realm: realm)
         query.sortKey = "name"
-        let dataSource = SimpleDataSource<Activity>(data: activites, cellIdentifier: "Activity Cell")
+        let dataSource = SimpleDataSource<Activity>(data: [], cellIdentifier: "Activity Cell")
         let adaptor = QueryDataSourceAdaptor<RealmActivity, Activity>(query: query, dataSource: dataSource)
         adaptor.conversionFunction = { return $0.toActivity() }
         viewController.dataSource = dataSource
+        query.pushQueryResults()
 
         activityQueryAdaptor = adaptor
         activityController = ActivityController(activityRepository: activityRepository, activitiesViewController: viewController)

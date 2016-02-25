@@ -31,10 +31,6 @@ public class RealmDynamicQuery<T: Object>: DynamicQuery<T> {
     }
   }
 
-  func pushQueryResults() {
-    self.itemsUpdateCallback?(self.getItems())
-  }
-
   override func updateQuery() {
     managedResult = rootResult
 
