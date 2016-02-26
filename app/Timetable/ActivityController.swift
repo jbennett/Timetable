@@ -23,8 +23,11 @@ class ActivityController {
   func editActivity(activity: Activity?) {
     let activity = activity ?? Activity()
     let editViewController = EditActivityViewController.fromStoryboard()
+    let form = ActivityForm(activity: activity)
     editViewController.activity = activity
+    editViewController.form = form
     editViewController.delegate = self
+    editViewController.dataSource = FormDataSource(form: form)
     let navViewController = UINavigationController(rootViewController: editViewController)
 
     activitiesViewController.presentViewController(navViewController, animated: true, completion: nil)

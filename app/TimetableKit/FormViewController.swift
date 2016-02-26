@@ -16,4 +16,9 @@ public class FormViewController: UITableViewController {
     }
   }
 
+  public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    dataSource.fieldAtIndexPath(indexPath).selectField()
+  }
+
 }

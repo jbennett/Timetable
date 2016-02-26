@@ -13,14 +13,17 @@ class EditActivityViewController: FormViewController {
 
   weak var delegate: EditActivityViewControllerDelegate?
   var activity: Activity!
-  
+  var form: ActivityForm!
+
   override func viewDidLoad() {
     guard activity != nil else {
       fatalError("trying to edit activity that doesn't exist")
     }
-
     super.viewDidLoad()
+
     title = titleString()
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 100
   }
 
   func titleString() -> String {
@@ -38,7 +41,7 @@ class EditActivityViewController: FormViewController {
 
   @IBAction func didTapSave() {
     let identifier = self.activity.identifier
-    let activity = Activity(name: name, identifier: identifier)
+    let activity = Activity(name: form.nameField.value, identifier: identifier)
 
     if activity.isValid() {
       closeKeyboard()

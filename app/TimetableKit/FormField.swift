@@ -12,4 +12,6 @@ public protocol FormField {
 
   var cell: UITableViewCell { get }
 
+  func selectField()
+
 }

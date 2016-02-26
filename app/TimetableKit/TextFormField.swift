@@ -10,14 +10,23 @@ import UIKit
 
 public struct TextFormField: FormField {
 
-  let title: String
-  let value: String?
+  public let cell: UITableViewCell
+  public var value: String {
+    get { return textCell.value }
+    set { textCell.value = value }
+  }
+  private let textCell: TextFormFieldCell
 
-  public let cell = UITableViewCell()
+  public init(title: String, value: String = "") {
+    self.textCell = TextFormFieldCell.fromNib()
+    self.textCell.value = value
+    self.textCell.valueField.placeholder = title
+    self.cell = textCell
+  }
 
-  public init(title: String, value: String? = nil) {
-    self.title = title
-    self.value = value
+  public func selectField() {
+    print("select")
+    textCell.becomeFirstResponder()
   }
 
 }

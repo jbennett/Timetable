@@ -11,8 +11,12 @@ import UIKit
 public class FormDataSource: NSObject, UITableViewDataSource {
 
   let form: Form
-  init(form: Form) {
+  public init(form: Form) {
     self.form = form
+  }
+  
+  public func fieldAtIndexPath(indexPath: NSIndexPath) -> FormField {
+    return form.sections[indexPath.section].fields[indexPath.row]
   }
 
   public func numberOfSectionsInTableView(tableView: UITableView) -> Int {

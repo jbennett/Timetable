@@ -14,7 +14,7 @@ class ActivityForm: Form {
   let nameField: TextFormField
 
   init(activity: Activity) {
-    nameField = TextFormField(title: "Name", value: activity.name)
+    nameField = TextFormField(title: "Activity Title", value: activity.name)
     super.init()
 
     sections = [

@@ -14,6 +14,13 @@
 		3B17515F1C800F6B00CA6711 /* TextFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17515E1C800F6B00CA6711 /* TextFormField.swift */; };
 		3B1751611C801B3300CA6711 /* FormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751601C801B3300CA6711 /* FormDataSource.swift */; };
 		3B1751631C80238300CA6711 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751621C80238300CA6711 /* FormViewController.swift */; };
+		3B17516C1C8094C800CA6711 /* TimetableUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B17516B1C8094C800CA6711 /* TimetableUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B1751731C8094C800CA6711 /* TimetableUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1751691C8094C800CA6711 /* TimetableUI.framework */; };
+		3B17517E1C8094C800CA6711 /* TimetableUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1751691C8094C800CA6711 /* TimetableUI.framework */; };
+		3B17517F1C8094C800CA6711 /* TimetableUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1751691C8094C800CA6711 /* TimetableUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B1751881C8094ED00CA6711 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751871C8094ED00CA6711 /* FloatLabelTextField.swift */; };
+		3B17518A1C80950900CA6711 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751891C80950900CA6711 /* FloatLabelTextView.swift */; };
+		3B17518F1C8097FB00CA6711 /* TextFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17518E1C8097FB00CA6711 /* TextFormFieldCell.swift */; };
 		3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */; };
 		3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */; };
 		3B6733BB1C756C23003B5B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733BA1C756C23003B5B1D /* AppDelegate.swift */; };
@@ -29,6 +36,7 @@
 		3B67340B1C75898D003B5B1D /* TimetableKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6733F51C75898D003B5B1D /* TimetableKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B6734181C758E95003B5B1D /* RealmActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6734171C758E95003B5B1D /* RealmActivityRepository.swift */; };
 		3B67341A1C758EED003B5B1D /* RealmActivityRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6734191C758EED003B5B1D /* RealmActivityRepositoryTests.swift */; };
+		3B67FE871C80A51300993D7B /* TextFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B67FE861C80A51300993D7B /* TextFormFieldCell.xib */; };
 		3B95F6A31C7899EA00C1BCA6 /* DynamicQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6A21C7899EA00C1BCA6 /* DynamicQuery.swift */; };
 		3B95F6A51C789B2800C1BCA6 /* RealmDynamicQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6A41C789B2800C1BCA6 /* RealmDynamicQuery.swift */; };
 		3B95F6A71C78A07E00C1BCA6 /* EditActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6A61C78A07E00C1BCA6 /* EditActivityViewController.swift */; };
@@ -53,6 +61,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B1751741C8094C800CA6711 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733AF1C756C23003B5B1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1751681C8094C800CA6711;
+			remoteInfo = TimetableUI;
+		};
+		3B1751761C8094C800CA6711 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733AF1C756C23003B5B1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B6733B61C756C23003B5B1D;
+			remoteInfo = Timetable;
+		};
+		3B17517C1C8094C800CA6711 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6733AF1C756C23003B5B1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1751681C8094C800CA6711;
+			remoteInfo = TimetableUI;
+		};
 		3B6733CE1C756C23003B5B1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B6733AF1C756C23003B5B1D /* Project object */;
@@ -92,6 +121,7 @@
 			files = (
 				3BC0C5FD1C759850003E919E /* Realm.framework in Embed Frameworks */,
 				3B67340B1C75898D003B5B1D /* TimetableKit.framework in Embed Frameworks */,
+				3B17517F1C8094C800CA6711 /* TimetableUI.framework in Embed Frameworks */,
 				3BC0C5FF1C759850003E919E /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -107,6 +137,14 @@
 		3B17515E1C800F6B00CA6711 /* TextFormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormField.swift; sourceTree = "<group>"; };
 		3B1751601C801B3300CA6711 /* FormDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDataSource.swift; sourceTree = "<group>"; };
 		3B1751621C80238300CA6711 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		3B1751691C8094C800CA6711 /* TimetableUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimetableUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B17516B1C8094C800CA6711 /* TimetableUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimetableUI.h; sourceTree = "<group>"; };
+		3B17516D1C8094C800CA6711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1751721C8094C800CA6711 /* TimetableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimetableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B17517B1C8094C800CA6711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1751871C8094ED00CA6711 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		3B1751891C80950900CA6711 /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		3B17518E1C8097FB00CA6711 /* TextFormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormFieldCell.swift; sourceTree = "<group>"; };
 		3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepositoryFactory.swift; sourceTree = "<group>"; };
 		3B6733B71C756C23003B5B1D /* Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +165,7 @@
 		3B6734071C75898D003B5B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B6734171C758E95003B5B1D /* RealmActivityRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActivityRepository.swift; sourceTree = "<group>"; };
 		3B6734191C758EED003B5B1D /* RealmActivityRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActivityRepositoryTests.swift; sourceTree = "<group>"; };
+		3B67FE861C80A51300993D7B /* TextFormFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFormFieldCell.xib; sourceTree = "<group>"; };
 		3B95F6A21C7899EA00C1BCA6 /* DynamicQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicQuery.swift; sourceTree = "<group>"; };
 		3B95F6A41C789B2800C1BCA6 /* RealmDynamicQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDynamicQuery.swift; sourceTree = "<group>"; };
 		3B95F6A61C78A07E00C1BCA6 /* EditActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActivityViewController.swift; sourceTree = "<group>"; };
@@ -145,12 +184,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B1751651C8094C800CA6711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B17516F1C8094C800CA6711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1751731C8094C800CA6711 /* TimetableUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B6733B41C756C23003B5B1D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3BC0C5FC1C759850003E919E /* Realm.framework in Frameworks */,
 				3B67340A1C75898D003B5B1D /* TimetableKit.framework in Frameworks */,
+				3B17517E1C8094C800CA6711 /* TimetableUI.framework in Frameworks */,
 				3BC0C5FE1C759850003E919E /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,14 +242,51 @@
 		3B1751531C7F538A00CA6711 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				3B17518D1C8097DE00CA6711 /* Fields */,
 				3B1751561C7F54D000CA6711 /* Form.swift */,
 				3B1751581C7F556B00CA6711 /* FormSection.swift */,
 				3B17515A1C7F569400CA6711 /* FormField.swift */,
-				3B17515E1C800F6B00CA6711 /* TextFormField.swift */,
 				3B1751601C801B3300CA6711 /* FormDataSource.swift */,
 				3B1751621C80238300CA6711 /* FormViewController.swift */,
 			);
 			name = Form;
+			sourceTree = "<group>";
+		};
+		3B17516A1C8094C800CA6711 /* TimetableUI */ = {
+			isa = PBXGroup;
+			children = (
+				3B1751861C8094CF00CA6711 /* Float Label Fields */,
+				3B17516B1C8094C800CA6711 /* TimetableUI.h */,
+				3B17516D1C8094C800CA6711 /* Info.plist */,
+			);
+			path = TimetableUI;
+			sourceTree = "<group>";
+		};
+		3B1751781C8094C800CA6711 /* TimetableUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3B17517B1C8094C800CA6711 /* Info.plist */,
+			);
+			path = TimetableUITests;
+			sourceTree = "<group>";
+		};
+		3B1751861C8094CF00CA6711 /* Float Label Fields */ = {
+			isa = PBXGroup;
+			children = (
+				3B1751871C8094ED00CA6711 /* FloatLabelTextField.swift */,
+				3B1751891C80950900CA6711 /* FloatLabelTextView.swift */,
+			);
+			name = "Float Label Fields";
+			sourceTree = "<group>";
+		};
+		3B17518D1C8097DE00CA6711 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				3B17515E1C800F6B00CA6711 /* TextFormField.swift */,
+				3B17518E1C8097FB00CA6711 /* TextFormFieldCell.swift */,
+				3B67FE861C80A51300993D7B /* TextFormFieldCell.xib */,
+			);
+			name = Fields;
 			sourceTree = "<group>";
 		};
 		3B5F6A051C7636FF00D98E34 /* Factories */ = {
@@ -252,6 +344,8 @@
 				3B6733D01C756C23003B5B1D /* TimetableUITests */,
 				3B6733F61C75898D003B5B1D /* TimetableKit */,
 				3B6734041C75898D003B5B1D /* TimetableKitTests */,
+				3B17516A1C8094C800CA6711 /* TimetableUI */,
+				3B1751781C8094C800CA6711 /* TimetableUITests */,
 				3BC0C5F91C7593C1003E919E /* Frameworks */,
 				3B6733B81C756C23003B5B1D /* Products */,
 			);
@@ -264,6 +358,8 @@
 				3B6733CD1C756C23003B5B1D /* TimetableUITests.xctest */,
 				3B6733F51C75898D003B5B1D /* TimetableKit.framework */,
 				3B6733FE1C75898D003B5B1D /* TimetableKitTests.xctest */,
+				3B1751691C8094C800CA6711 /* TimetableUI.framework */,
+				3B1751721C8094C800CA6711 /* TimetableUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,6 +459,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3B1751661C8094C800CA6711 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B17516C1C8094C800CA6711 /* TimetableUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B6733F21C75898D003B5B1D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +478,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3B1751681C8094C800CA6711 /* TimetableUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1751801C8094C800CA6711 /* Build configuration list for PBXNativeTarget "TimetableUI" */;
+			buildPhases = (
+				3B1751641C8094C800CA6711 /* Sources */,
+				3B1751651C8094C800CA6711 /* Frameworks */,
+				3B1751661C8094C800CA6711 /* Headers */,
+				3B1751671C8094C800CA6711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimetableUI;
+			productName = TimetableUI;
+			productReference = 3B1751691C8094C800CA6711 /* TimetableUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B1751711C8094C800CA6711 /* TimetableUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1751831C8094C800CA6711 /* Build configuration list for PBXNativeTarget "TimetableUITests" */;
+			buildPhases = (
+				3B17516E1C8094C800CA6711 /* Sources */,
+				3B17516F1C8094C800CA6711 /* Frameworks */,
+				3B1751701C8094C800CA6711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B1751751C8094C800CA6711 /* PBXTargetDependency */,
+				3B1751771C8094C800CA6711 /* PBXTargetDependency */,
+			);
+			name = TimetableUITests;
+			productName = TimetableUITests;
+			productReference = 3B1751721C8094C800CA6711 /* TimetableUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3B6733B61C756C23003B5B1D /* Timetable */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B6733D61C756C23003B5B1D /* Build configuration list for PBXNativeTarget "Timetable" */;
@@ -390,6 +531,7 @@
 			);
 			dependencies = (
 				3B6734091C75898D003B5B1D /* PBXTargetDependency */,
+				3B17517D1C8094C800CA6711 /* PBXTargetDependency */,
 			);
 			name = Timetable;
 			productName = Timetable;
@@ -461,6 +603,14 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jonathan Bennett";
 				TargetAttributes = {
+					3B1751681C8094C800CA6711 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8EQFQ9RY84;
+					};
+					3B1751711C8094C800CA6711 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 3B6733B61C756C23003B5B1D;
+					};
 					3B6733B61C756C23003B5B1D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8EQFQ9RY84;
@@ -496,11 +646,27 @@
 				3B6733CC1C756C23003B5B1D /* TimetableUITests */,
 				3B6733F41C75898D003B5B1D /* TimetableKit */,
 				3B6733FD1C75898D003B5B1D /* TimetableKitTests */,
+				3B1751681C8094C800CA6711 /* TimetableUI */,
+				3B1751711C8094C800CA6711 /* TimetableUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B1751671C8094C800CA6711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1751701C8094C800CA6711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B6733B51C756C23003B5B1D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +689,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B67FE871C80A51300993D7B /* TextFormFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +750,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B1751641C8094C800CA6711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1751881C8094ED00CA6711 /* FloatLabelTextField.swift in Sources */,
+				3B17518A1C80950900CA6711 /* FloatLabelTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B17516E1C8094C800CA6711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B6733B31C756C23003B5B1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -626,6 +809,7 @@
 				3B1751591C7F556B00CA6711 /* FormSection.swift in Sources */,
 				3B6734181C758E95003B5B1D /* RealmActivityRepository.swift in Sources */,
 				3B1751571C7F54D000CA6711 /* Form.swift in Sources */,
+				3B17518F1C8097FB00CA6711 /* TextFormFieldCell.swift in Sources */,
 				3B17515F1C800F6B00CA6711 /* TextFormField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +825,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B1751751C8094C800CA6711 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1751681C8094C800CA6711 /* TimetableUI */;
+			targetProxy = 3B1751741C8094C800CA6711 /* PBXContainerItemProxy */;
+		};
+		3B1751771C8094C800CA6711 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B6733B61C756C23003B5B1D /* Timetable */;
+			targetProxy = 3B1751761C8094C800CA6711 /* PBXContainerItemProxy */;
+		};
+		3B17517D1C8094C800CA6711 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1751681C8094C800CA6711 /* TimetableUI */;
+			targetProxy = 3B17517C1C8094C800CA6711 /* PBXContainerItemProxy */;
+		};
 		3B6733CF1C756C23003B5B1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B6733B61C756C23003B5B1D /* Timetable */;
@@ -683,6 +882,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B1751811C8094C800CA6711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TimetableUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.TimetableUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3B1751821C8094C800CA6711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TimetableUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.TimetableUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B1751841C8094C800CA6711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = TimetableUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.TimetableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timetable.app/Timetable";
+			};
+			name = Debug;
+		};
+		3B1751851C8094C800CA6711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = TimetableUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.TimetableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timetable.app/Timetable";
+			};
+			name = Release;
+		};
 		3B6733D41C756C23003B5B1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -913,6 +1185,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B1751801C8094C800CA6711 /* Build configuration list for PBXNativeTarget "TimetableUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1751811C8094C800CA6711 /* Debug */,
+				3B1751821C8094C800CA6711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B1751831C8094C800CA6711 /* Build configuration list for PBXNativeTarget "TimetableUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1751841C8094C800CA6711 /* Debug */,
+				3B1751851C8094C800CA6711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B6733B21C756C23003B5B1D /* Build configuration list for PBXProject "Timetable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
