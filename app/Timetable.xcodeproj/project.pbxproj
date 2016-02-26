@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1751551C7F53B100CA6711 /* ActivityForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751541C7F53B100CA6711 /* ActivityForm.swift */; };
+		3B1751571C7F54D000CA6711 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751561C7F54D000CA6711 /* Form.swift */; };
+		3B1751591C7F556B00CA6711 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751581C7F556B00CA6711 /* FormSection.swift */; };
+		3B17515B1C7F569400CA6711 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17515A1C7F569400CA6711 /* FormField.swift */; };
+		3B17515F1C800F6B00CA6711 /* TextFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17515E1C800F6B00CA6711 /* TextFormField.swift */; };
+		3B1751611C801B3300CA6711 /* FormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751601C801B3300CA6711 /* FormDataSource.swift */; };
+		3B1751631C80238300CA6711 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1751621C80238300CA6711 /* FormViewController.swift */; };
 		3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */; };
 		3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */; };
 		3B6733BB1C756C23003B5B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6733BA1C756C23003B5B1D /* AppDelegate.swift */; };
@@ -93,6 +100,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B1751541C7F53B100CA6711 /* ActivityForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityForm.swift; sourceTree = "<group>"; };
+		3B1751561C7F54D000CA6711 /* Form.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		3B1751581C7F556B00CA6711 /* FormSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
+		3B17515A1C7F569400CA6711 /* FormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		3B17515E1C800F6B00CA6711 /* TextFormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormField.swift; sourceTree = "<group>"; };
+		3B1751601C801B3300CA6711 /* FormDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDataSource.swift; sourceTree = "<group>"; };
+		3B1751621C80238300CA6711 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		3B5F6A061C76370E00D98E34 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		3B5F6A081C76373F00D98E34 /* RealmRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepositoryFactory.swift; sourceTree = "<group>"; };
 		3B6733B71C756C23003B5B1D /* Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +184,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1751531C7F538A00CA6711 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				3B1751561C7F54D000CA6711 /* Form.swift */,
+				3B1751581C7F556B00CA6711 /* FormSection.swift */,
+				3B17515A1C7F569400CA6711 /* FormField.swift */,
+				3B17515E1C800F6B00CA6711 /* TextFormField.swift */,
+				3B1751601C801B3300CA6711 /* FormDataSource.swift */,
+				3B1751621C80238300CA6711 /* FormViewController.swift */,
+			);
+			name = Form;
+			sourceTree = "<group>";
+		};
 		3B5F6A051C7636FF00D98E34 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +240,7 @@
 		3B5F6A0E1C76392400D98E34 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B1751541C7F53B100CA6711 /* ActivityForm.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -266,6 +294,7 @@
 			children = (
 				3BB4AE071C77C25C00924FE8 /* Data */,
 				3B5F6A051C7636FF00D98E34 /* Factories */,
+				3B1751531C7F538A00CA6711 /* Form */,
 				3BC0C5F41C7590CB003E919E /* Models */,
 				3B6734161C758E7D003B5B1D /* Repositories */,
 				3B6733F71C75898D003B5B1D /* TimetableKit.h */,
@@ -561,6 +590,7 @@
 				3B6733BF1C756C23003B5B1D /* SecondViewController.swift in Sources */,
 				3B6733BB1C756C23003B5B1D /* AppDelegate.swift in Sources */,
 				3B95F6A71C78A07E00C1BCA6 /* EditActivityViewController.swift in Sources */,
+				3B1751551C7F53B100CA6711 /* ActivityForm.swift in Sources */,
 				3BB4AE0C1C77C74500924FE8 /* ActivitiesViewController.swift in Sources */,
 				3B95F6AD1C78FE1F00C1BCA6 /* ActivityController.swift in Sources */,
 				3B95F6AB1C78EAC700C1BCA6 /* ThemeController.swift in Sources */,
@@ -586,11 +616,17 @@
 				3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */,
 				3BD5CD4B1C7E68B300729691 /* QueryDataSourceAdaptor.swift in Sources */,
 				3B95F6A51C789B2800C1BCA6 /* RealmDynamicQuery.swift in Sources */,
+				3B1751611C801B3300CA6711 /* FormDataSource.swift in Sources */,
+				3B1751631C80238300CA6711 /* FormViewController.swift in Sources */,
+				3B17515B1C7F569400CA6711 /* FormField.swift in Sources */,
 				3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */,
 				3BC0C5F81C75918D003E919E /* ActivityRepository.swift in Sources */,
 				3BB4AE0E1C77C7A300924FE8 /* SimpleDataSource.swift in Sources */,
 				3BC0C5F61C7590D5003E919E /* Activity.swift in Sources */,
+				3B1751591C7F556B00CA6711 /* FormSection.swift in Sources */,
 				3B6734181C758E95003B5B1D /* RealmActivityRepository.swift in Sources */,
+				3B1751571C7F54D000CA6711 /* Form.swift in Sources */,
+				3B17515F1C800F6B00CA6711 /* TextFormField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ public class SimpleDataSource<T>: NSObject, UITableViewDataSource {
     self.data = data
     self.cellIdentifier = cellIdentifier
   }
-  
+
   public func bindToTableView(tableView: UITableView) {
     self.tableView = tableView
     tableView.dataSource = self

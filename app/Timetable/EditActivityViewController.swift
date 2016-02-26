@@ -9,15 +9,11 @@
 import UIKit
 import TimetableKit
 
-class EditActivityViewController: UITableViewController {
+class EditActivityViewController: FormViewController {
 
   weak var delegate: EditActivityViewControllerDelegate?
-  @IBOutlet var nameField: UITextField!
-
-  var activity: Activity! {
-    didSet { self.updateForm() }
-  }
-
+  var activity: Activity!
+  
   override func viewDidLoad() {
     guard activity != nil else {
       fatalError("trying to edit activity that doesn't exist")
@@ -25,7 +21,6 @@ class EditActivityViewController: UITableViewController {
 
     super.viewDidLoad()
     title = titleString()
-    updateForm()
   }
 
   func titleString() -> String {
@@ -36,19 +31,12 @@ class EditActivityViewController: UITableViewController {
     }
   }
 
-  func updateForm() {
-    guard isViewLoaded() else { return }
-
-    nameField.text = activity.name
-  }
-
   @IBAction func didTapCancel() {
     closeKeyboard()
     delegate?.editActivityViewController(self, didCancelEditingActivity: activity)
   }
 
   @IBAction func didTapSave() {
-    let name = nameField.text ?? ""
     let identifier = self.activity.identifier
     let activity = Activity(name: name, identifier: identifier)
 
