@@ -14,7 +14,7 @@ public class TextFormFieldCell: UITableViewCell {
 
   public var value: String {
     get { return valueField.text ?? "" }
-    set { valueField.text = value }
+    set { valueField.text = newValue }
   }
 
   public override func becomeFirstResponder() -> Bool {

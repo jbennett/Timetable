@@ -10,8 +10,10 @@ import Foundation
 
 public class Form {
 
-  public var sections = [FormSection]()
+  public var sections: [FormSection]
 
-  public init() {}
+  public init(sections: [FormSection] = []) {
+    self.sections = sections
+  }
 
 }
