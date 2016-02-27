@@ -15,6 +15,13 @@ public class FormViewController: UITableViewController {
       self.tableView.dataSource = dataSource
     }
   }
+  
+  public override func viewDidLoad() {
+    dataSource.form
+      .sections.first?
+      .fields.first?
+      .selectField()
+  }
 
   public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
