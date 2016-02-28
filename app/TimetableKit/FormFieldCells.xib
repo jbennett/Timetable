@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10112" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="LLw-dW-JDl" customClass="ButtonFormFieldCell" customModule="TimetableKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LLw-dW-JDl" id="O1F-Ma-MaD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-CV-SZC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="buttonCallback" destination="LLw-dW-JDl" eventType="touchUpInside" id="FRn-uV-mlw"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xfj-CV-SZC" firstAttribute="width" secondItem="O1F-Ma-MaD" secondAttribute="width" id="3mp-EV-kkn"/>
+                    <constraint firstItem="xfj-CV-SZC" firstAttribute="height" secondItem="O1F-Ma-MaD" secondAttribute="height" id="O4I-PA-wJl"/>
+                    <constraint firstItem="xfj-CV-SZC" firstAttribute="centerX" secondItem="O1F-Ma-MaD" secondAttribute="centerX" id="Xt0-vy-swd"/>
+                    <constraint firstItem="xfj-CV-SZC" firstAttribute="centerY" secondItem="O1F-Ma-MaD" secondAttribute="centerY" id="dxr-3O-Tmz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button" destination="xfj-CV-SZC" id="eNw-1I-bVy"/>
+            </connections>
+            <point key="canvasLocation" x="496" y="430"/>
+        </tableViewCell>
+    </objects>
+</document>

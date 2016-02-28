@@ -15,7 +15,7 @@ public class FormViewController: UITableViewController {
       self.tableView.dataSource = dataSource
     }
   }
-  
+
   public override func viewDidLoad() {
     dataSource.form
       .sections.first?

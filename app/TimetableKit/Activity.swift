@@ -12,9 +12,11 @@ public struct Activity {
 
   public let identifier: AnyObject?
   public let name: String
+  public let activityPatterns: [ActivityPattern]
 
-  public init(name: String = "", identifier: AnyObject? = nil) {
+  public init(name: String = "", activityPatterns: [ActivityPattern] = [], identifier: AnyObject? = nil) {
     self.name = name
+    self.activityPatterns = activityPatterns
     self.identifier = identifier
   }
 

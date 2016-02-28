@@ -25,7 +25,6 @@ public struct TextFormField: FormField {
   }
 
   public func selectField() {
-    print("select")
     textCell.becomeFirstResponder()
   }
 

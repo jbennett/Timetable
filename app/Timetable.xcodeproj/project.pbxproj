@@ -43,6 +43,10 @@
 		3B95F6A91C78A1B700C1BCA6 /* EditActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B95F6A81C78A1B700C1BCA6 /* EditActivityViewController.storyboard */; };
 		3B95F6AB1C78EAC700C1BCA6 /* ThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6AA1C78EAC700C1BCA6 /* ThemeController.swift */; };
 		3B95F6AD1C78FE1F00C1BCA6 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95F6AC1C78FE1F00C1BCA6 /* ActivityController.swift */; };
+		3BA87CD11C83F823004E14D7 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA87CD01C83F823004E14D7 /* Pattern.swift */; };
+		3BA87CD31C83FCB9004E14D7 /* ButtonFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA87CD21C83FCB9004E14D7 /* ButtonFormField.swift */; };
+		3BA87CD51C83FCC8004E14D7 /* FormFieldCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA87CD41C83FCC8004E14D7 /* FormFieldCells.xib */; };
+		3BA87CD91C841A83004E14D7 /* ButtonFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA87CD81C841A83004E14D7 /* ButtonFormFieldCell.swift */; };
 		3BB4AE091C77C27E00924FE8 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */; };
 		3BB4AE0C1C77C74500924FE8 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */; };
 		3BB4AE0E1C77C7A300924FE8 /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */; };
@@ -172,6 +176,10 @@
 		3B95F6A81C78A1B700C1BCA6 /* EditActivityViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditActivityViewController.storyboard; sourceTree = "<group>"; };
 		3B95F6AA1C78EAC700C1BCA6 /* ThemeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeController.swift; sourceTree = "<group>"; };
 		3B95F6AC1C78FE1F00C1BCA6 /* ActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
+		3BA87CD01C83F823004E14D7 /* Pattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		3BA87CD21C83FCB9004E14D7 /* ButtonFormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFormField.swift; sourceTree = "<group>"; };
+		3BA87CD41C83FCC8004E14D7 /* FormFieldCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormFieldCells.xib; sourceTree = "<group>"; };
+		3BA87CD81C841A83004E14D7 /* ButtonFormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFormFieldCell.swift; sourceTree = "<group>"; };
 		3BB4AE081C77C27E00924FE8 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		3BB4AE0B1C77C74500924FE8 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		3BB4AE0D1C77C7A300924FE8 /* SimpleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDataSource.swift; sourceTree = "<group>"; };
@@ -285,6 +293,9 @@
 				3B17515E1C800F6B00CA6711 /* TextFormField.swift */,
 				3B17518E1C8097FB00CA6711 /* TextFormFieldCell.swift */,
 				3B67FE861C80A51300993D7B /* TextFormFieldCell.xib */,
+				3BA87CD21C83FCB9004E14D7 /* ButtonFormField.swift */,
+				3BA87CD81C841A83004E14D7 /* ButtonFormFieldCell.swift */,
+				3BA87CD41C83FCC8004E14D7 /* FormFieldCells.xib */,
 			);
 			name = Fields;
 			sourceTree = "<group>";
@@ -443,6 +454,7 @@
 			children = (
 				3BC0C5F51C7590D5003E919E /* Activity.swift */,
 				3BC0C6051C75A01E003E919E /* RealmActivity.swift */,
+				3BA87CD01C83F823004E14D7 /* Pattern.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -689,6 +701,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA87CD51C83FCC8004E14D7 /* FormFieldCells.xib in Resources */,
 				3B67FE871C80A51300993D7B /* TextFormFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,6 +807,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA87CD91C841A83004E14D7 /* ButtonFormFieldCell.swift in Sources */,
+				3BA87CD11C83F823004E14D7 /* Pattern.swift in Sources */,
 				3B95F6A31C7899EA00C1BCA6 /* DynamicQuery.swift in Sources */,
 				3BC0C6061C75A01E003E919E /* RealmActivity.swift in Sources */,
 				3B5F6A071C76370E00D98E34 /* RepositoryFactory.swift in Sources */,
@@ -804,6 +819,7 @@
 				3B17515B1C7F569400CA6711 /* FormField.swift in Sources */,
 				3B5F6A091C76373F00D98E34 /* RealmRepositoryFactory.swift in Sources */,
 				3BC0C5F81C75918D003E919E /* ActivityRepository.swift in Sources */,
+				3BA87CD31C83FCB9004E14D7 /* ButtonFormField.swift in Sources */,
 				3BB4AE0E1C77C7A300924FE8 /* SimpleDataSource.swift in Sources */,
 				3BC0C5F61C7590D5003E919E /* Activity.swift in Sources */,
 				3B1751591C7F556B00CA6711 /* FormSection.swift in Sources */,
